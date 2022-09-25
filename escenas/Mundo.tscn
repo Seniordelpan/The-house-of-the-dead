@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://escenas/Area2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://escenas/KinematicBody2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/Mundo.gd" type="Script" id=4]
 
 [node name="Mundo" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1031.0
 margin_bottom = 601.0
 color = Color( 0.368627, 0.298039, 0.298039, 1 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 345, 179 )
 
 [node name="mirilla" parent="." instance=ExtResource( 1 )]
 
